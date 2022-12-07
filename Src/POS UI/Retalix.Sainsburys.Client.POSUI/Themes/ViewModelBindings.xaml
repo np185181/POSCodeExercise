@@ -1,0 +1,45 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ViewModels="clr-namespace:Retalix.Sainsburys.Client.POSUI.ViewModels"
+                    xmlns:Views="clr-namespace:Retalix.Sainsburys.Client.POSUI.Views"
+                    xmlns:viewModels="clr-namespace:Retalix.Client.POS.Presentation.ViewModels.ViewModels;assembly=Retalix.Client.POS.Presentation.ViewModels"
+                    xmlns:views="clr-namespace:Retalix.Client.POS.Presentation.Views.Views;assembly=Retalix.Client.POS.Presentation.Views"
+                    xmlns:viewModels1="clr-namespace:Retalix.Sainsburys.Client.POS.ViewModels;assembly=Retalix.Sainsburys.Client.POS">
+
+    <DataTemplate DataType="{x:Type ViewModels:SainsburysTenderViewModel}">
+        <Views:SainsburysTenderView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels1:SainsburysCashPaymentChangeViewModel}">
+        <Views:SSLCashPaymentChangeView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:UserRolesViewModel}">
+        <Views:UserRoleView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:UserRolesInputViewModel}">
+        <Views:UserRoleInput />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels1:SainsburysNoChangeViewModel}">
+        <views:NoChangeView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels1:SainsburysRefundPaymentViewModel}">
+        <views:RefundPaymentView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:SSLCloseCashDrawerViewModel}">
+        <Views:SSLCloseCashDrawerView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels:DeviceErrorViewModel}">
+        <Views:SainsburysDeviceErrorView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModels1:SainsburysPOSReceiptConfirmationViewModel}">
+        <views:ReceiptConfirmationView />
+    </DataTemplate>
+
+</ResourceDictionary>
