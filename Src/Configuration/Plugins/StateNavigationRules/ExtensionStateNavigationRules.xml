@@ -1,0 +1,2357 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ExtensionNavigationRules touchPointType="POS">
+
+	<NavigationRule>
+		<FromState>VendorCouponValueEntryState</FromState>
+		<NavigationCase>
+			<FromOutcome>AutoTransactionFinishTransactionNotFinished</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>SignLoginMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckSuccessStateNoSaleMode</FromOutcome>
+			<ToState>ScaleCheckPrintingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>TransactionClosed</FromOutcome>
+			<ToState>@</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>LoginMode</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToScreenSaverMode</FromOutcome>
+			<ToState>ScreenSaverMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+  <NavigationRule>
+    <FromState>*</FromState>
+    <NavigationCase>
+      <FromOutcome>EFTOfflineQueueInProgress</FromOutcome>
+      <ToState>EFTOfflineQueueInProgressState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>EFTOfflineQueueInProgressState</FromState>
+    <NavigationCase>
+      <FromOutcome>EFTOfflineQueueInProgressFinished</FromOutcome>
+      <ToState>..</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScreenSaverMode</FromState>
+		<NavigationCase>
+			<FromOutcome>CashDrawerOpenMode</FromOutcome>
+			<ToState>LoginMode_CashDrawerOpenMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SignLoginMode</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToScreenSaverMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToScreenSaverMode</FromOutcome>
+			<ToState>ScreenSaverMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+  <NavigationRule>
+    <FromState>NoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>UserRolesLookupOutcome</FromOutcome>
+      <ToState>UserRolesLookup</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+		<FromState>CardNumPointsBalanceState</FromState>
+		<NavigationCase>
+			<FromOutcome>PrintSucceeded</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CardNumPointsBalanceState</FromState>
+		<NavigationCase>
+			<FromOutcome>OfflineCustomer</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>CardNumPointsBalanceState</FromOutcome>
+			<ToState>CardNumPointsBalanceState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>CardNumPointsBalanceState</FromOutcome>
+			<ToState>CardNumPointsBalanceState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+  <NavigationRule>
+    <FromState>*</FromState>
+    <NavigationCase>
+      <FromOutcome>OnlineItemScanLongBarcodeState</FromOutcome>
+      <ToState>OnlineItemSwipeCard</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>OnlineItemScanLongBarcodeState_ItemReturn</FromOutcome>
+			<ToState>OnlineItemSwipeCard</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CardNumPointsBalanceState</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>NonTenderModeEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScreenSaverMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ExitScreenSaverMode</FromOutcome>
+			<ToState>LoginMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckPrintingState</FromOutcome>
+			<ToState>ScaleCheckPrintingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LoginMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckPrintingState</FromOutcome>
+			<ToState>ScaleCheckPrintingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SignLoginMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckPrintingState</FromOutcome>
+			<ToState>ScaleCheckPrintingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LoginMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckSuccessStateNoSaleMode</FromOutcome>
+			<ToState>ScaleCheckPrintingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckSuccessStateNoSaleMode</FromOutcome>
+			<ToState>ScaleCheckPrintingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScaleCheckPrintingState</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckSuccessStateNoSaleMode</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScaleCheckPrintingState</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckSuccessStateLoginMode</FromOutcome>
+			<ToState>LoginMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScaleCheckPrintingState</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckSuccessStateSignLoginMode</FromOutcome>
+			<ToState>SignLoginMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+  <NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckWaitingState</FromOutcome>
+			<ToState>ScaleCheckWaitingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LoginMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckWaitingState</FromOutcome>
+			<ToState>ScaleCheckWaitingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScaleCheckWaitingState</FromState>
+		<NavigationCase>
+			<FromOutcome>NoSaleMode</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScaleCheckWaitingState</FromState>
+		<NavigationCase>
+			<FromOutcome>SignLoginMode</FromOutcome>
+			<ToState>LoginMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScaleCheckWaitingState</FromState>
+		<NavigationCase>
+			<FromOutcome>RefreshScaleCheck</FromOutcome>
+			<ToState>@</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SignLoginMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckWaitingState</FromOutcome>
+			<ToState>ScaleCheckWaitingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScaleCheckWaitingState</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckPrintingState</FromOutcome>
+			<ToState>ScaleCheckPrintingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScaleCheckWaitingState</FromState>
+		<NavigationCase>
+			<FromOutcome>ScaleCheckPrintingState</FromOutcome>
+			<ToState>ScaleCheckPrintingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>SuspendTransactionVoidTendersState</FromOutcome>
+			<ToState>SuspendTransactionVoidTendersState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>VoidTransactionVoidTendersState</FromOutcome>
+			<ToState>VoidTransactionVoidTendersState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>CancelVoidTransaction</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>ColleagueValidationScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPartialRedemptionNotAllowed</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPartialRedemptionNotAllowed</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>ColleagueValidationScreen</FromOutcome>
+			<ToState>ColleagueValidationScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ColleagueValidationScreenNoSale</FromOutcome>
+			<ToState>ColleagueValidationScreenNoSale</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ColleagueValidationScreenNoSale</FromOutcome>
+			<ToState>ColleagueValidationScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionSaleMode_WithSelection</FromState>
+		<NavigationCase>
+			<FromOutcome>ColleagueValidationScreenNoSale</FromOutcome>
+			<ToState>ColleagueValidationScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ColleagueValidationScreenNoSale</FromOutcome>
+			<ToState>ColleagueValidationScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LotteryReversalState</FromState>
+		<NavigationCase>
+			<FromOutcome>DrawerOpenSuccess</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LotteryReversalState</FromState>
+		<NavigationCase>
+			<FromOutcome>LotteryAccountsLookupSuccess</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LotteryReversalState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	  <NavigationRule>
+	    <FromState>*</FromState>
+	    <NavigationCase>
+	      <FromOutcome>PaidOutSuccess</FromOutcome>
+	      <ToState>PaidInOutFinishMode</ToState>
+	    </NavigationCase>
+	  </NavigationRule>
+
+	
+	<NavigationRule>
+		<FromState>PaidIn_PleaseWaitState</FromState>
+		<NavigationCase>
+			<FromOutcome>PaidInFailed</FromOutcome>
+			<ToState>LotteryReversalState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+
+	<NavigationRule>
+		<FromState>LotteryReversalTypesState</FromState>
+		<NavigationCase>
+			<FromOutcome>LotteryReversal</FromOutcome>
+			<ToState>LotteryReversalState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LotteryReversalState</FromState>
+		<NavigationCase>
+			<FromOutcome>PleaseWait</FromOutcome>
+			<ToState>PaidIn_PleaseWaitState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>LotteryReversalTypesMode</FromOutcome>
+			<ToState>LotteryReversalTypesState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>LotteryTypesMode</FromOutcome>
+			<ToState>LotteryTypesState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LotteryTypesState</FromState>
+		<NavigationCase>
+			<FromOutcome>PaidOutMode</FromOutcome>
+			<ToState>PaidOutMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ColleagueValidationScreenNoSale</FromState>
+		<NavigationCase>
+			<FromOutcome>ColleagueValidationScreenNoSale</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ColleagueValidationScreenNoSale</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerAddSuccess</FromOutcome>
+			<ToState>SaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ColleagueValidationScreenNoSale</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>NonTenderModeEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ColleagueValidationScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerAddSuccess</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerAddFailed</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ColleagueValidationScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>SaleMode</FromOutcome>
+			<ToState>SaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>CharityDonationState</FromOutcome>
+			<ToState>CharityDonationState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CharityDonationState</FromState>
+		<NavigationCase>
+			<FromOutcome>DonateAmountState</FromOutcome>
+			<ToState>DonateAmountState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CharityDonationState</FromState>
+		<NavigationCase>
+			<FromOutcome>ManualRoundUpState</FromOutcome>
+			<ToState>ManualRoundUpState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>CharityDonationAdded</FromOutcome>
+			<ToState>TenderMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CharityDonationState</FromState>
+		<NavigationCase>
+			<FromOutcome>LineItemAddSuccess</FromOutcome>
+			<ToState>..</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>RefundCharitySaleTransactionState</FromOutcome>
+			<ToState>RefundCharitySaleTransactionState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RefundCharitySaleTransactionState</FromState>
+		<NavigationCase>
+			<FromOutcome>ItemReturnSuccess</FromOutcome>
+			<ToState>..</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnTransactionCharityState</FromOutcome>
+			<ToState>ReturnTransactionCharityState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionCharityState</FromState>
+		<NavigationCase>
+			<FromOutcome>ItemReturnSuccess</FromOutcome>
+			<ToState>ReturnTransactionSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>TransactionBasedReturnCharityState</FromOutcome>
+			<ToState>TransactionBasedReturnCharityState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TransactionBasedReturnCharityState</FromState>
+		<NavigationCase>
+			<FromOutcome>ItemReturnSuccess</FromOutcome>
+			<ToState>ReturnTransactionSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>VoidColleague</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>TransactionStatusSuccess_SaleMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>*</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>PrintSucceeded</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>QualityRefund</FromOutcome>
+			<ToState>QualityRefundState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>QualityRefundState</FromState>
+		<NavigationCase>
+			<FromOutcome>ItemReturnSuccess</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>QualityRefundState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>OnlineItemRefundFailed</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>GetServerStatusSuccess</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<!--Goodwill-->
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>OpenGoodwillOptionSelection</FromOutcome>
+			<ToState>GoodWillOptionSelectionState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>GoodWillOptionSelectionState</FromState>
+		<NavigationCase>
+			<FromOutcome>OpenGoodwillManualInput</FromOutcome>
+			<ToState>GoodWillManualInputState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>GoodWillOptionSelectionState</FromState>
+		<NavigationCase>
+			<FromOutcome>OpenGoodwillManualItem</FromOutcome>
+			<ToState>GoodWillManualItemState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>GoodWillManualInputState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseGoodwillAdd</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>GoodWillManualItemState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseGoodwillAdd</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<!--PointsUpdate-->
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>SwipeOrScanNectarCardForPointsUpdateState</FromOutcome>
+			<ToState>SwipeOrScanNectarCardForPointsUpdateState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SwipeOrScanNectarCardForPointsUpdateState</FromState>
+		<NavigationCase>
+			<FromOutcome>CardNumPointsUpdateState</FromOutcome>
+			<ToState>PointsUpdateState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>PointsUpdateState</FromState>
+		<NavigationCase>
+			<FromOutcome>PrintSucceeded</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>PointsUpdateState</FromState>
+		<NavigationCase>
+			<FromOutcome>ClosePointsUpdate</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>PointsUpdateState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>PointsUpdateState</FromState>
+		<NavigationCase>
+			<FromOutcome>FailedPointsUpdate</FromOutcome>
+			<ToState>@</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>PointsUpdateState</FromOutcome>
+			<ToState>PointsUpdateState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>SupervisorApprovalPointsUpdateState</FromOutcome>
+			<ToState>SupervisorApprovalPointsUpdateState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>OnlineItemActivationFailedItemVoided</FromState>
+		<NavigationCase>
+			<FromOutcome>NectarCardManualEntryTenderMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>OnlineItemSwipeCard</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>HardwareErrorsApprovalScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>EPSHostHideMessage</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>GoToPosApprovalScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>EPSHostHideMessage</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>WelcomeScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>NectarCardManualEntryTenderMode</FromOutcome>
+			<ToState>TenderMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>NectarCardManualEntryTenderMode</FromOutcome>
+			<ToState>LockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>NectarCardManualEntryTenderMode</FromOutcome>
+			<ToState>NectarCardManualEntryTenderMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NectarCardManualEntryTenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>GetPaymentOptionsSuccess</FromOutcome>
+			<ToState>TenderMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NectarCardManualEntryTenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerAddSuccess</FromOutcome>
+			<ToState>TenderMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NectarCardManualEntryTenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>TenderMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>NectarCardManualEntryState</FromOutcome>
+			<ToState>ReturnTransactionNectarCardManualEntry</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionNectarCardManualEntry</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerAddSuccess</FromOutcome>
+			<ToState>ReturnTransactionSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerAddSuccess</FromOutcome>
+			<ToState>ScoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CashPaymentMode_Change</FromState>
+		<NavigationCase>
+			<FromOutcome>EPSHostHideMessage</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>EPSHostHideMessage</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>OnlineItemSwipeCard</FromState>
+		<NavigationCase>
+			<FromOutcome>EPSHostHideMessage</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>EPSHostHideMessage</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>PreGiftCardWaitingMode</FromState>
+		<NavigationCase>
+			<FromOutcome>EFT_PaymentAmountState</FromOutcome>
+			<ToState>GiftCard_RedemptionAmountState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>NonTenderModeEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ColleagueValidationScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>NonTenderModeEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NectarCardManualEntry</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>NonTenderModeEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NectarCardManualEntryTenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>NonTenderModeEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>NonTenderModeEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NonTenderModeEFTErrorState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>..</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>GiftCardBalanceEnquiryState</FromOutcome>
+			<ToState>GiftCardBalanceEnquiryState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>GiftCardBalanceEnquiryState</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>NonTenderModeEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NonTenderModeEFTErrorState</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>GiftCardBalanceEnquiryState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>OnlineItemSwipeCard</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>NonTenderModeEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>OnlineItemExpiryDateValidation</FromState>
+		<NavigationCase>
+			<FromOutcome>OnlineItemValidationError</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>OnlineItemSwipeCard</FromState>
+		<NavigationCase>
+			<FromOutcome>OnlineItemExpiryDateValidationState</FromOutcome>
+			<ToState>OnlineItemExpiryDateValidation</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>OnlineItemExpiryDateValidationState</FromState>
+		<NavigationCase>
+			<FromOutcome>OnlineItemSwipeCard</FromOutcome>
+			<ToState>LineItemAddSuccess</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>OnlineItemExpiryDateValidationState</FromState>
+		<NavigationCase>
+			<FromOutcome>LineItemAddSuccess</FromOutcome>
+			<ToState>SaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>SwipeOrEnterSaveBackCardState</FromOutcome>
+			<ToState>SwipeOrEnterSaveBackCardState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>SaveBackAmountState</FromOutcome>
+			<ToState>SaveBackAmountState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SaveBackAmountState</FromState>
+		<NavigationCase>
+			<FromOutcome>SaleMode</FromOutcome>
+			<ToState>SaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SaveBackAmountState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>..</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>FinishTransactionSuccess</FromOutcome>
+			<ToState>CashPaymentMode_Change</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>OnlineGroupDisplay</FromOutcome>
+			<ToState>ReturnTransactionSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<!--For Refund Recalculation TBR ending with total 0-->
+	<NavigationRule>
+		<FromState>ReturnTransactionSaleMode_WithSelection</FromState>
+		<NavigationCase>
+			<FromOutcome>FinishTransactionSuccessNoChange</FromOutcome>
+			<ToState>NoChangeMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionByEFTWaitingState_TBR</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>ReturnTransactionByEFTWaitingErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionByEFTWaitingState_TBR</FromState>
+		<NavigationCase>
+			<FromOutcome>FailedToFindTransactionLog</FromOutcome>
+			<ToState>CustomerTransactionsNotFoundErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+  <NavigationRule>
+    <FromState>HardwareErrorsList_NoSale</FromState>
+    <NavigationCase>
+      <FromOutcome>CTMHardwareErrorGuide</FromOutcome>
+      <ToState>CTMHardwareErrorGuide</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>HardwareErrorsList</FromState>
+    <NavigationCase>
+      <FromOutcome>CTMHardwareErrorGuide</FromOutcome>
+      <ToState>CTMHardwareErrorGuide</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>CTMHardwareErrorGuide</FromState>
+    <NavigationCase>
+      <FromOutcome>InterventionInfoDeleteSuccess</FromOutcome>
+      <ToState>..</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+	<!--TBR Strategy Selection-->
+	<NavigationRule>
+		<FromState>SaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnTransactionBasedBeginSuccess</FromOutcome>
+			<ToState>ReturnTransactionStrategySelectionState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>TransactionBasedReturnPOSParametersSearchMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnTransactionBasedBeginSuccess</FromOutcome>
+			<ToState>ReturnTransactionStrategySelectionState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionByEFTWaitingState_TBR</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnTransactionBasedBeginSuccess</FromOutcome>
+			<ToState>ReturnTransactionStrategySelectionState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>MultipleTransactionLookupSuccessState_TBR</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnTransactionBasedBeginSuccess</FromOutcome>
+			<ToState>ReturnTransactionStrategySelectionState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TransactionOptionsMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnTransactionBasedBeginSuccess</FromOutcome>
+			<ToState>ReturnTransactionStrategySelectionState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TransacionBasedReturnSearchByBarcodeMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnTransactionBasedBeginSuccess</FromOutcome>
+			<ToState>ReturnTransactionStrategySelectionState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TransactionBasedReturnSearchTrasnactionOptionsState</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnTransactionBasedBeginSuccess</FromOutcome>
+			<ToState>ReturnTransactionStrategySelectionState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionStrategySelectionState</FromState>
+		<NavigationCase>
+			<FromOutcome>*</FromOutcome>
+			<ToState>ReturnTransactionSaleMode_WithSelection</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionStrategySelectionState</FromState>
+		<NavigationCase>
+			<FromOutcome>StrategyCommandHandlerEnd</FromOutcome>
+			<ToState>ReturnTransactionSaleMode_WithSelection</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnTransactionBasedBeginSuccess</FromOutcome>
+			<ToState>ReturnTransactionStrategySelectionState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<!--TBR Strategy Selection End-->
+
+	<!--TBR Recalculation Confirmation-->
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>RecalculationConfirmationNeeded</FromOutcome>
+			<ToState>RecalculationConfirmation</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecalculationConfirmation</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecalculationConfirmation</FromState>
+		<NavigationCase>
+			<FromOutcome>ItemReturnSuccess</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecalculationConfirmation</FromState>
+		<NavigationCase>
+			<FromOutcome>DepartmentReturnSuccess</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecalculationConfirmation</FromState>
+		<NavigationCase>
+			<FromOutcome>RecalculationDetails</FromOutcome>
+			<ToState>RecalculationDetailsState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<!--TBR Recalculation Confirmation End-->
+
+	<NavigationRule>
+		<FromState>ReturnTransactionManualWeightEnterItemState</FromState>
+		<NavigationCase>
+			<FromOutcome>NrrEmbeddedWeightItemWasManuallyweighed</FromOutcome>
+			<ToState>ReturnTransactionSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>GiftReceiptGetTransactionByEFTState</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>ReturnTransactionByEFTWaitingErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>GiftReceiptGetTransactionByEFTState</FromState>
+		<NavigationCase>
+			<FromOutcome>FailedToFindTransactionLog</FromOutcome>
+			<ToState>CustomerTransactionsNotFoundErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<!-- coinstar-->
+	<NavigationRule>
+		<FromState>CouponPurchaseOptions</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponCoinstarSelected</FromOutcome>
+			<ToState>ScanOrEnterCouponCoinstar</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterCouponCoinstar</FromState>
+		<NavigationCase>
+			<FromOutcome>GetCouponCoinstarInfo</FromOutcome>
+			<ToState>CouponCoinstarAmount</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponCoinstarAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>CoinstarAccepted</FromOutcome>
+			<ToState>CouponPurchaseRefundOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponCoinstarAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>TransactionFinishedWithRefundSuccess</FromOutcome>
+			<ToState>CoinstarPurchaseGoodbye</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>GOBackTOCouponPurchaseOptions</FromOutcome>
+			<ToState>CouponPurchaseOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseOptions</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>GOBackToNoSaleMode</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponCoinstarAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>GoBackToNoSaleMode</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	<!--coinstar-->
+
+	<!--Coupon Purchse-->
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchaseConfigurationLookupSucceed</FromOutcome>
+			<ToState>CouponPurchaseOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseOptions</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchaseOptionSelected</FromOutcome>
+			<ToState>CouponPurchaseReasonOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchaseReasonSelected</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterCouponPurchase</FromState>
+		<NavigationCase>
+			<FromOutcome>GetCouponPurchaseInfo</FromOutcome>
+			<ToState>CouponPurchaseAmount</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchaseAmount</FromOutcome>
+			<ToState>CouponPurchaseAmount</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterCouponPurchase</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnBackToCouponPurchaseOptions</FromOutcome>
+			<ToState>CouponPurchaseOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterCouponPurchase</FromState>
+		<NavigationCase>
+			<FromOutcome>SkipToCouponPurchaseRefundOptions</FromOutcome>
+			<ToState>CouponPurchaseRefundOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterCouponPurchase</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchaseManualAmount</FromOutcome>
+			<ToState>CouponPurchaseManualAmount</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>SkipToCouponPurchaseRefundOptions</FromOutcome>
+			<ToState>CouponPurchaseRefundOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>ShowCouponAcceptMessage</FromOutcome>
+			<ToState>CouponPurchaseAcceptMessage</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseManualAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>ShowCouponAcceptMessage</FromOutcome>
+			<ToState>CouponPurchaseAcceptMessage</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseManualAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>RejectedCouponAudited</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseManualAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseAcceptMessage</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerHaveMoreCoupon</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseAcceptMessage</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerHaveNoMoreCoupon</FromOutcome>
+			<ToState>CouponPurchaseRefundOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseManualAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerHaveMoreCoupons</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchasePosRecoveredAfterCrush</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchaseFlowEnded</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseRefundOptions</FromState>
+		<NavigationCase>
+			<FromOutcome>TransactionFinishedWithRefundSuccess</FromOutcome>
+			<ToState>CouponPurchaseGoodbye</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchaseTransactionFinishedWithRefundSuccessAfterCrash</FromOutcome>
+			<ToState>CouponPurchaseGoodbye</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseScanGiftCardForRefund</FromState>
+		<NavigationCase>
+			<FromOutcome>TransactionFinishedWithRefundSuccess</FromOutcome>
+			<ToState>CouponPurchaseGoodbye</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseRefundOptions</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchaseScanGiftCardForRefund</FromOutcome>
+			<ToState>CouponPurchaseScanGiftCardForRefund</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseScanGiftCardForRefund</FromState>
+		<NavigationCase>
+			<FromOutcome>EftRefundCanceledByError</FromOutcome>
+			<ToState>CouponPurchaseEftRefundErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseEftRefundErrorState</FromState>
+		<NavigationCase>
+			<FromOutcome>GoBack</FromOutcome>
+			<ToState>CouponPurchaseRefundOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchaseGiftCardRefundCanceledAfterCrash</FromOutcome>
+			<ToState>CouponPurchaseRefundOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+
+
+
+	<NavigationRule>
+		<FromState>CouponPurchaseScanGiftCardForRefund</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>CouponPurchaseRefundOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseScanGiftCardForRefund</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>CouponPurchaseEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseEFTErrorState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>CouponPurchaseScanGiftCardForRefund</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<!-- Points Coupon Purchase -->
+
+	<NavigationRule>
+		<FromState>PointsUpdateState</FromState>
+		<NavigationCase>
+			<FromOutcome>PointsCouponPurchaseConfigurationLookupSucceed</FromOutcome>
+			<ToState>PointsCouponPurchaseReasonOptions</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>PointsCouponPurchaseReasonOptions</FromState>
+		<NavigationCase>
+			<FromOutcome>PointsCouponPurchaseReasonSelected</FromOutcome>
+			<ToState>ScanOrEnterPointsCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>WelcomeScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>PointsCouponPurchaseReasonSelected</FromOutcome>
+			<ToState>ScanOrEnterPointsCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterPointsCouponPurchase</FromState>
+		<NavigationCase>
+			<FromOutcome>ReturnBackToPointsUpdateState</FromOutcome>
+			<ToState>PointsUpdateState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterPointsCouponPurchase</FromState>
+		<NavigationCase>
+			<FromOutcome>GetCouponPurchaseInfo</FromOutcome>
+			<ToState>PointsCouponPurchaseAmount</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>PointsCouponPurchaseAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>ShowCouponAcceptMessage</FromOutcome>
+			<ToState>PointsCouponPurchaseAcceptMessage</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>PointsCouponPurchaseAcceptMessage</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerHaveMoreCoupon</FromOutcome>
+			<ToState>ScanOrEnterPointsCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<!--******************************************************************************-->
+
+	<NavigationRule>
+		<FromState>EFTVoidTenderState</FromState>
+		<NavigationCase>
+			<FromOutcome>LineTenderCancelSuccess</FromOutcome>
+			<ToState>TenderMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>LineTenderCancelSuccess</FromOutcome>
+			<ToState>TenderMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>EFTPaymentProcessMode</FromState>
+		<NavigationCase>
+			<FromOutcome>LineTenderCancelSuccess</FromOutcome>
+			<ToState>TenderMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<!--******************************************************************************-->
+
+
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>PayByPointsTenderError</FromOutcome>
+			<ToState>PayByPointsTenderErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SwipeOrEnterSaveBackCardState</FromState>
+		<NavigationCase>
+			<FromOutcome>EFTErrorState</FromOutcome>
+			<ToState>NonTenderModeEFTErrorState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<!--Home Shopping-->
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>EnterOrderState</FromOutcome>
+			<ToState>EnterOrderState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>EnterOrderState</FromState>
+		<NavigationCase>
+			<FromOutcome>TransactionStatusSuccess_SaleMode</FromOutcome>
+			<ToState>SaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>HomeShoppingOrderProcessingState</FromOutcome>
+			<ToState>HomeShoppingOrderProcessingState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>HomeShoppingEftPaymentDeclined</FromOutcome>
+			<ToState>HomeShoppingEftPaymentDeclinedState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ReturnTransactionSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>EnterOrderState</FromOutcome>
+			<ToState>HomeShoppingManualRefundEnterOrderState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RefundReasonCodes</FromState>
+		<NavigationCase>
+			<FromOutcome>EnterOrderState</FromOutcome>
+			<ToState>HomeShoppingManualRefundEnterOrderState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>HomeShoppingManualRefundEnterOrderState</FromState>
+		<NavigationCase>
+			<FromOutcome>ItemReturnSuccess</FromOutcome>
+			<ToState>ReturnTransactionSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>HomeShoppingProcessBrmProblematicItems</FromOutcome>
+			<ToState>HomeShoppingProcessBrmProblematicItems</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>HomeShoppingEftPaymentDeclinedState</FromState>
+		<NavigationCase>
+			<FromOutcome>SetTenderMode</FromOutcome>
+			<ToState>TenderMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LoginMode</FromState>
+		<NavigationCase>
+			<FromOutcome>AutoRefundInProcess</FromOutcome>
+			<ToState>HomeShoppingProcessAutoRefund</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScreenSaverMode</FromState>
+		<NavigationCase>
+			<FromOutcome>AutoRefundInProcess</FromOutcome>
+			<ToState>LoginMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>HomeShoppingProcessAutoRefund</FromState>
+		<NavigationCase>
+			<FromOutcome>AutoRefundDone</FromOutcome>
+			<ToState>LoginMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>VoidNectarSuccess</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>VendorCouponValueEntryState</FromState>
+		<NavigationCase>
+			<FromOutcome>LineCouponAddSuccess</FromOutcome>
+			<ToState>SaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>BakeryTransactionStatusOutcome</FromOutcome>
+			<ToState>SaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	
+	<!-- Vat Receipt -->
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>VatRecieptInit</FromOutcome>
+			<ToState>ScanOrEnterVatReciept</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterVatReciept</FromState>
+		<NavigationCase>
+			<FromOutcome>GoBackToNoSaleMode</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterVatReciept</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToCustomerDetailsScreen</FromOutcome>
+			<ToState>CustomerDetailsScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CustomerDetailsScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>GoBackToNoSaleMode</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CustomerDetailsScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToSelectTitleVatReciept</FromOutcome>
+			<ToState>VatRecieptTitleSelection</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>VatRecieptTitleSelection</FromState>
+		<NavigationCase>
+			<FromOutcome>GoBackToCustomerDetailsFromSelectionTitle</FromOutcome>
+			<ToState>CustomerDetailsScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>LockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SSCMultipleTransactionListState</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToScoSaleMode</FromOutcome>
+			<ToState touchPointType="SelfCheckOut">ScoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>OnlineItemVoidRequired</FromState>
+		<NavigationCase>
+			<FromOutcome>TransactionClosed</FromOutcome>
+			<ToState>SuspendTransactionVoidTendersState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+  <NavigationRule>
+    <FromState>OnlineItemVoidRequired</FromState>
+    <NavigationCase>
+      <FromOutcome>CancelOnlineItemVoidRequired</FromOutcome>
+      <ToState>\</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+<NavigationRule>
+	<FromState>*</FromState>
+	<NavigationCase>
+		<FromOutcome>SelfScanFullRescanValidationCommandHandlerSuccess</FromOutcome>
+		 <ToState>*</ToState>
+	</NavigationCase>
+</NavigationRule>
+
+	
+	<NavigationRule>
+		<FromState>SSCMultipleTransactionListState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState touchPointType="SelfCheckOut">ScoWelcomeMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToSco</FromOutcome>
+			<ToState touchPointType="SelfCheckOut">ScoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+  <NavigationRule>
+    <FromState>SSCMultipleTransactionListState</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToSco</FromOutcome>
+      <ToState touchPointType="SelfCheckOut">ScoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+	<NavigationRule>
+		<FromState>SaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToSSCMultipleIntervantionList</FromOutcome>
+			<ToState>SSCMultipleTransactionListState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToSSCMultipleIntervantionList</FromOutcome>
+			<ToState>SSCMultipleTransactionListState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>SSCMultipleTransactionListState</FromState>
+		<NavigationCase>
+			<FromOutcome>TransactionClosedAfterVoidSSCTransaction</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>SuspendTransactionFailed</FromOutcome>
+			<ToState>LockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>SuspendTransactionFailed</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>NoSaleMode</FromState>
+		<NavigationCase>
+			<FromOutcome>PrintCertificateSuccess</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	<NavigationRule>
+		<FromState>CouponPurchaseGoodbye</FromState>
+		<NavigationCase>
+			<FromOutcome>LockScreen</FromOutcome>
+			<ToState>CouponPurchase_LockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	<NavigationRule>
+		<FromState>CouponPurchase_LockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>Unlock</FromOutcome>
+			<ToState>CouponPurchasePrintlessGoodbye</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchasePrintlessGoodbye</FromState>
+		<NavigationCase>
+			<FromOutcome>LockScreen</FromOutcome>
+			<ToState>CouponPurchase_LockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterPointsCouponPurchase</FromState>
+		<NavigationCase>
+			<FromOutcome>LockScreen</FromOutcome>
+			<ToState>ScanOrEnterPointsCouponPurchase_LockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterPointsCouponPurchase_LockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>Unlock</FromOutcome>
+			<ToState>ScanOrEnterPointsCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterCouponPurchase</FromState>
+		<NavigationCase>
+			<FromOutcome>NectarCardRequired</FromOutcome>
+			<ToState>SwipeOrScanNectarCardForCouponPurchaseState</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SwipeOrScanNectarCardForCouponPurchaseState</FromState>
+		<NavigationCase>
+			<FromOutcome>GetCouponPurchaseInfo</FromOutcome>
+			<ToState>CouponPurchaseAmount</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SwipeOrScanNectarCardForCouponPurchaseState</FromState>
+		<NavigationCase>
+			<FromOutcome>RejectedCouponAudited</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SwipeOrScanNectarCardForCouponPurchaseState</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterCouponPurchase</FromState>
+		<NavigationCase>
+			<FromOutcome>MalCouponRedemptionOutcome</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>ScanOrEnterPointsCouponPurchase</FromState>
+		<NavigationCase>
+			<FromOutcome>MalCouponRedemptionOutcome</FromOutcome>
+			<ToState>ScanOrEnterPointsCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SwipeOrScanNectarCardForCouponPurchaseState</FromState>
+		<NavigationCase>
+			<FromOutcome>CouponPurchaseManualAmount</FromOutcome>
+			<ToState>CouponPurchaseMalRedemptionManualAmount</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseMalRedemptionManualAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>CustomerHaveMoreCoupons</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseMalRedemptionManualAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>ShowCouponAcceptMessage</FromOutcome>
+			<ToState>CouponPurchaseAcceptMessage</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseMalRedemptionManualAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>CloseView</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>CouponPurchaseMalRedemptionManualAmount</FromState>
+		<NavigationCase>
+			<FromOutcome>RejectedCouponAudited</FromOutcome>
+			<ToState>ScanOrEnterCouponPurchase</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>BRMErrorMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<!-- Recycle Navigation Rules -->
+	<NavigationRule>
+		<FromState>RecoveryLockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>StartRecycleExecution</FromOutcome>
+			<ToState>RecycleExecutionMessageLockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>LockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>StartRecycleExecution</FromOutcome>
+			<ToState>RecycleExecutionMessageLockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecycleExecutionMessageLockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToScreenSaverMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecycleExecutionMessageLockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>RecycleProcessMode</FromOutcome>
+			<ToState>RecycleProcessModeLockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>StartRecycleExecution</FromOutcome>
+			<ToState>RecycleExecutionMessage</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecoveryLockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>RecycleProcessMode</FromOutcome>
+			<ToState>RecycleProcessModeLockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>RecycleProcessMode</FromOutcome>
+			<ToState>RecycleProcessModeLockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecycleProcessModeLockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>RecyleProcessFinished</FromOutcome>
+			<ToState>LockScreen</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecycleProcessModeLockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>ExitScreenSaverMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecycleProcessModeLockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToScreenSaverMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>RecycleProcessMode</FromOutcome>
+			<ToState>RecycleProcessMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>*</FromState>
+		<NavigationCase>
+			<FromOutcome>RecyleProcessFinished</FromOutcome>
+			<ToState>\</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+	<NavigationRule>
+		<FromState>RecycleExecutionMessage</FromState>
+		<NavigationCase>
+			<FromOutcome>ExitScreenSaverMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecycleExecutionMessage</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToScreenSaverMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecycleProcessMode</FromState>
+		<NavigationCase>
+			<FromOutcome>ExitScreenSaverMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>RecycleProcessMode</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToScreenSaverMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+		<NavigationRule>
+				<FromState>SaleMode</FromState>
+				<NavigationCase>
+						<FromOutcome>CancelPromptCarrierBagsSaleMode</FromOutcome>
+						<ToState>*</ToState>
+				</NavigationCase>
+		</NavigationRule>
+
+	<NavigationRule>
+		<FromState>WelcomeScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>CancelPromptCarrierBagsSaleMode</FromOutcome>
+			<ToState>SaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>SaleMode_ScaleError</FromState>
+		<NavigationCase>
+			<FromOutcome>CancelPromptCarrierBagsSaleMode</FromOutcome>
+			<ToState>SaleMode_ScaleError</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>TenderMode</FromState>
+		<NavigationCase>
+			<FromOutcome>EPSAuthorizationDeclined_HandleInterventionByShopper</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>InterventionList</FromState>
+		<NavigationCase>
+			<FromOutcome>GetPaymentOptionsSuccess</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+	<NavigationRule>
+		<FromState>LockScreen</FromState>
+		<NavigationCase>
+			<FromOutcome>CancelPromptCarrierBagsSaleMode</FromOutcome>
+			<ToState>*</ToState>
+		</NavigationCase>
+	</NavigationRule>
+	
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>SslPaySuccess</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>SslPayFailed</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>SslPayProcessMessageView</FromOutcome>
+      <ToState>SslPayProcessMessageState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SslPayProcessMessageState</FromState>
+    <NavigationCase>
+      <FromOutcome>TenderMode</FromOutcome>
+      <ToState>TenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>PleaseWait</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>ReceiptFormattingSuccess</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>EftDeclinePrintingFailed</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+	<NavigationRule>
+    <FromState>LotteryReversalState</FromState>
+    <NavigationCase>
+      <FromOutcome>CloseConfirmationMessage</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidOutMode</FromState>
+    <NavigationCase>
+      <FromOutcome>CloseConfirmationMessage</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>CtmPopUpErrors</FromState>
+    <NavigationCase>
+      <FromOutcome>NoSaleMode</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>GiftCard_RedemptionAmountState</FromState>
+    <NavigationCase>
+      <FromOutcome>PreLineTenderCancelSuccess</FromOutcome>
+      <ToState>\</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+</ExtensionNavigationRules>
